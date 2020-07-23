@@ -154,11 +154,11 @@ const resolvers = {
       return newClient;
     },
     removeClient: (parent, args, context) => {
-      if (role !== root) {
+     /* if (role !== root) {
         throw new AuthenticationError(
           "Must be authenticated as root do add a client"
         );
-      }
+      }*/
       let i = 0;
       for (; i < clients.length; i++) {
         if (args.id === clients[i].id) break;
