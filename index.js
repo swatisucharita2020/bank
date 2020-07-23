@@ -138,11 +138,12 @@ const resolvers = {
   },
   Mutation: {
     addClient: (parent, args, context) => {
-      if (role !== root) {
+     /* Commented by Swati
+     if (role !== root) {
         throw new AuthenticationError(
           "Must be authenticated as root do add a client"
         );
-      }
+      }*/ 
       const newClient = {
         id: v4(),
         name: args.name,
