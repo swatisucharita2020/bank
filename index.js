@@ -124,9 +124,9 @@ const clients = [
 const resolvers = {
   Query: {
     clients: () => {
-     /* if (role !== root) {
+     if (role !== root) {
         throw new AuthenticationError("Can only fetch users as root");
-      }*/
+      }
       return clients;
     },
     me: () => {
